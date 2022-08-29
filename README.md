@@ -32,10 +32,10 @@ java -jar .\build\libs\JavaWrapper-1.0-SNAPSHOT-all.jar -f .\data\Myocardial_Inf
 If one of the arguments is missing it gives you the next outcome:  
 Parsing failed! As a result of an error: No arff file is provided with unknown instances  
 usage: java -jar JavaWrapper-1.0-SNAPSHOT-all.jar [options]  
--f,--file <arg>      The input file with the known classes of the instances  
--h,--help            Displays the help for the command line arguments 
--u,--unknown <arg>   The input file of the unknown classes of the instances
-inputFile: .\data\Myocardial_Infraction.arff
+-f,--file <arg>      The input file with the known classes of the instances    
+-h,--help            Displays the help for the command line arguments   
+-u,--unknown <arg>   The input file of the unknown classes of the instances  
+inputFile: .\data\Myocardial_Infraction.arff  
 unknownInputFile = null
 
 When the program works it should give the next example:  
