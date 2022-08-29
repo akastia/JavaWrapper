@@ -1,17 +1,15 @@
 /*
- * Copyright (c) 2021. Rose Hazenberg
- * Licensed under GPLv3. See gpl.md
- *
+ * Copyright (c) 2022. Akastia Christo
  *
  */
 
-package nl.bioinf;
+package nl.bioinf.wrapper;
 
 import org.apache.commons.cli.*;
 
 /**
- * This class adds the options which needed to be fetched from the command line.
- * Fetch for the command line and check if the options are indeed provided.
+ * This class adds the options which needed to be collected from the command line.
+ * Collects for the command line and checks if the options are provided.
  */
 
 public class OptionsGetter implements OptionProvider {
@@ -21,7 +19,7 @@ public class OptionsGetter implements OptionProvider {
     private String unknownFile;
 
     /**
-     * Create and parse the arguments.
+     * Creates and parses the arguments.
      * @param args from the command line
      */
     public OptionsGetter(String [] args) {
@@ -30,9 +28,10 @@ public class OptionsGetter implements OptionProvider {
     }
 
     /**
-     * Private and doesn't return anything.
-     * Create the options to get the arff file with the known classes and
-     * to get the file with the unknown classes. And it creates a help option.
+     * It is private and doesn't return anything.
+     * Creates the options to obtain the arff file containing the known classes,
+     * and to get the file containing the unknown classes.
+     * Additionally, a help option is also created.
      */
     private void createOptions() {
         try {
@@ -48,14 +47,14 @@ public class OptionsGetter implements OptionProvider {
             options.addOption(new Option("h",
                     "help",
                     false,
-                    "Prints the help for the command line arguments"));
+                    "Displays the help for the command line arguments"));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Gets the arguments from the command and otherwise print help.
+     * Obtains the arguments from the command line and in the absence of it, prints help.
      * @param args command line args
      */
     private void parseCommandArgs(String[] args) {
@@ -67,15 +66,15 @@ public class OptionsGetter implements OptionProvider {
             }
             checkOptions();
         } catch (ParseException exp) {
-            System.err.println("Parsing failed! Because something went wrong: " +
+            System.err.println("Parsing failed! As a result of an error: " +
                     exp.getMessage());
             printHelp();
         }
     }
 
     /**
-     * Checks if the options are provides.
-     * @throws ParseException if not files provided
+     * Checks if the options are provided.
+     * @throws ParseException if there are no files provided
      */
     private void checkOptions() throws ParseException {
         if (cmd.hasOption('f')) {
@@ -95,7 +94,7 @@ public class OptionsGetter implements OptionProvider {
      */
     private void printHelp() {
         HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("java -jar Wrapper-1.0-SNAPSHOT-all.jar [options]", options);
+        formatter.printHelp("java -jar JavaWrapper-1.0-SNAPSHOT-all.jar [options]", options);
     }
 
     /**

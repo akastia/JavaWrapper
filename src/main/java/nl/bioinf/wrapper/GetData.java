@@ -1,11 +1,9 @@
 /*
- * Copyright (c) 2021. Rose Hazenberg
- * Licensed under GPLv3. See gpl.md
- *
+ * Copyright (c) 2022. Akastia Christo
  *
  */
 
-package nl.bioinf;
+package nl.bioinf.wrapper;
 
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
@@ -15,11 +13,17 @@ import weka.filters.unsupervised.attribute.Remove;
 import java.io.IOException;
 
 /**
- * This class obtains the data of the arff file and remove the attribute that is necessary.
+ * This class gets the data of the arff file and set the invertselecion to false,
+ * and filters the attribute that is necessary.
  */
 
 public class GetData {
-
+    /**
+     * Is protected, so it can only used by the files of the same packages.
+     * @param datafile
+     * @return filteredData
+     * @throws Exception
+     */
     protected Instances removeAttribute(Instances datafile) throws Exception {
         Remove remove = new Remove();
         remove.setInvertSelection(false);
@@ -28,8 +32,8 @@ public class GetData {
         return filteredData;
     }
     /**
-     * Is protected, so it can only be used in files from the same package.
-     * Reads both files and load the instances.
+     * Is protected, so it can only be used by the files from the same package.
+     * Reads both files and loads the instances.
      * @param datafile arff file with known and unknown classes
      * @return data
      * @throws IOException is failed to load

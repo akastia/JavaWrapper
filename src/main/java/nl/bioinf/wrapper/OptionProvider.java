@@ -1,14 +1,12 @@
 /*
- * Copyright (c) 2021. Rose Hazenberg
- * Licensed under GPLv3. See gpl.md
- *
+ * Copyright (c) 2022. Akastia Christo
  *
  */
 
-package nl.bioinf;
+package nl.bioinf.wrapper;
 
 /**
- * Interface that give the options that is requested.
+ * Interface provides the options that is requested.
  */
 
 public interface OptionProvider {

@@ -1,26 +1,25 @@
 /*
- * Copyright (c) 2021. Rose Hazenberg
- * Licensed under GPLv3. See gpl.md
- *
+ * Copyright (c) 2022. Akastia Christo
  *
  */
 
-package nl.bioinf;
+package nl.bioinf.wrapper;
 
 /**
- * This class implements the interface GiveOptions where it gets the file names and prints it.
+ * This class implements the OptionsProvider interface,
+ * which allows it to obtain the file names and prints them.
  */
 
 public class ArgsEngine {
     /**
      * Implements the interface.
-     * Get the names and prints it.
-     * @param giveOptions the interface
+     * Gets the file names and prints it.
+     * @param optionProvider the interface
      */
-    void activation(OptionProvider giveOptions) {
-        String dataFile = giveOptions.getFileName();
+    void activation(OptionProvider optionProvider) {
+        String dataFile = optionProvider.getFileName();
         System.out.println("InputFile = " + dataFile);
-        String unknownFile = giveOptions.getUnknownFile();
+        String unknownFile = optionProvider.getUnknownFile();
         System.out.println("UnknownInputFile = " + unknownFile);
     }
 }

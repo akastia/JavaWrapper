@@ -1,17 +1,16 @@
 /*
- * Copyright (c) 2021. Rose Hazenberg
- * Licensed under GPLv3. See gpl.md
- *
+ * Copyright (c) 2022. Akastia Christo
  *
  */
 
-package nl.bioinf;
+package nl.bioinf.wrapper;
 
 import weka.classifiers.trees.RandomForest;
 import weka.core.Instances;
 
 /**
- * This class is the main which gets the arguments and classifies the new instances. Set everything to work.
+ * This class is the main which gets the arguments and categorise the new instances.
+ * Sets up every file to let it work.
  */
 
 public class RunnerMain {
