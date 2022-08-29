@@ -39,13 +39,13 @@ inputFile: .\data\Myocardial_Infraction.arff
 unknownInputFile = null
 
 When the program works it should give the next example:  
-AGE: 85.0, SEX: Male, predicted: asystole
-AGE: 54.0, SEX: Female, predicted: asystole
-AGE: 77.0, SEX: Male, predicted: progress of congestive heart failure
-AGE: 53.0, SEX: Male, predicted: unknown
-AGE: 77.0, SEX: Male, predicted: myocardial rupture
-AGE: 62.0, SEX: Male, predicted: myocardial rupture
-AGE: 71.0, SEX: Female, predicted: myocardial rupture
+AGE: 85.0, SEX: Male, predicted: asystole  
+AGE: 54.0, SEX: Female, predicted: asystole  
+AGE: 77.0, SEX: Male, predicted: progress of congestive heart failure  
+AGE: 53.0, SEX: Male, predicted: unknown  
+AGE: 77.0, SEX: Male, predicted: myocardial rupture  
+AGE: 62.0, SEX: Male, predicted: myocardial rupture  
+AGE: 71.0, SEX: Female, predicted: myocardial rupture  
 
 Another options to run the ***RunnerMain.java*** is with the Edit Configuration, program arguments:  
 -f data/Myocardial_infraction.arff -u data/unknown.arff  
