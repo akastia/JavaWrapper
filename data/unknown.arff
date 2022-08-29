@@ -1,0 +1,34 @@
+@relation Myocardial_Infraction
+
+@attribute AGE numeric
+@attribute SEX {Male,Female}
+@attribute INF_ANAM numeric
+@attribute IBS_POST numeric
+@attribute ZSN_A numeric
+@attribute S_AD_ORIT numeric
+@attribute D_AD_ORIT numeric
+@attribute O_L_POST numeric
+@attribute K_SH_POST numeric
+@attribute MP_TP_POST numeric
+@attribute ant_im numeric
+@attribute lat_im numeric
+@attribute IM_PG_P numeric
+@attribute ritm_ecg_p_01 numeric
+@attribute n_p_ecg_p_12 numeric
+@attribute L_BLOOD numeric
+@attribute TIME_B_S numeric
+@attribute R_AB_3_n numeric
+@attribute NITR_S numeric
+@attribute B_BLOK_S_n numeric
+@attribute ANT_CA_S_n numeric
+@attribute ASP_S_n numeric
+@attribute LET_IS {unknown,'pulmonary edema','ventricular fibrillation','progress of congestive heart failure','cardiogenic shock',thromboembolism,asystole,'myocardial rupture'}
+
+@data
+85,Male,1,0,0,160,90,0,0,0,0,0,0,0,0,7.7,?,0,0,0,0,0,?
+54,Female,2,1,0,110,70,0,0,0,0,0,0,0,0,5.4,2,0,0,0,1,1,?
+77,Male,1,2,2,110,70,0,0,0,0,0,0,?,?,11,5,0,0,0,0,1,?
+53,Male,1,2,0,110,70,1,0,0,4,2,0,?,0,10.6,?,?,0,?,?,?,?
+77,Male,0,0,0,140,80,0,0,0,0,0,0,1,1,5.4,5,0,0,0,1,0,?
+62,Male,0,0,0,140,80,0,0,0,4,1,0,1,0,10.5,1,?,0,0,1,1,?
+71,Female,0,2,0,110,70,0,0,0,4,2,0,1,0,5.1,1,0,0,1,1,1,?
